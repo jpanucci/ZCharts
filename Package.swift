@@ -3,7 +3,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Charts",
+    name: "ZCharts",
     platforms: [
           .iOS(.v12),
           .tvOS(.v12),
@@ -11,19 +11,19 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "Charts",
-            targets: ["Charts"]),
+            name: "ZCharts",
+            targets: ["ZCharts"]),
         .library(
-            name: "ChartsDynamic",
+            name: "ZChartsDynamic",
             type: .dynamic,
-            targets: ["Charts"])
+            targets: ["ZCharts"])
     ],
     dependencies: [
         .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0")
     ],
     targets: [
         .target(
-            name: "Charts",
+            name: "ZCharts",
             dependencies: [.product(name: "Algorithms", package: "swift-algorithms")]
         )
     ],
